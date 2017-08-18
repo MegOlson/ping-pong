@@ -22,12 +22,13 @@ function inputConversion(numberInput) {
         numbers.push(i);
       }
     }
-    return numbers.join("  ");
+    return numbers.join("    ");
   }
 }
 
 
 // User Interface Logic
+
 $(document).ready(function() {
   $("#number").submit(function(event) {
     event.preventDefault();
@@ -38,7 +39,6 @@ $(document).ready(function() {
       $(".alert").show();
     } else {
       $("#result").text(inputConversion(numberInput));
-
     }
   });
 });
