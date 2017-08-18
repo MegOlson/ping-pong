@@ -11,18 +11,18 @@ function inputConversion(numberInput) {
     return error;
   } else {
     var numbers = [];
-    for (var i = numberInput; i > 0; i--) {
-      if (i%3 === 0) {
-        numbers.push("ping");
+    for (var i = 1; i <= numberInput; i++) {
+      if (i%15 === 0) {
+        numbers.push("ping-pong");
       } else if (i%5 === 0) {
         numbers.push("pong");
-      } else if (i%15 === 0) {
-        numbers.push("ping-pong");
+      } else if (i%3 === 0) {
+        numbers.push("ping");
       } else {
         numbers.push(i);
       }
     }
-    return numbers;
+    return numbers.join("  ");
   }
 }
 
@@ -38,6 +38,7 @@ $(document).ready(function() {
       $(".alert").show();
     } else {
       $("#result").text(inputConversion(numberInput));
+
     }
   });
 });

@@ -9,15 +9,26 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="heading">
       <div class="jumbotron">
-        <h1>Ping-Pong</h1>
+        <h1>Ping Pong</h1>
       </div>
-        <div class="panel">
-          <div class="panel-body">
+    </div>
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="instructions">
+            <h4>How to play:</h4>
+            <h6>Ping Pong will count up to your number starting with 1 with the following exceptions:</h6>
+            <ul>
+              <li>Numbers divisible by 3 are replaced with "ping</li>
+              <li>Numbers divisible by 5 are replaced with "pong"</li>
+              <li>Numbers divisible by 15 are replaced with "ping-pong"</li>
+            </ul>
+          </div>
           <form id="number">
             <div class="form-group">
-              <label for="number">Enter a number</label>
+              <label for="number">Enter your number here:</label>
               <input type="text" id="number-input" class="form-control">
             </div>
             <button type="submit" class="btn">Ping-Pong</button>
@@ -25,7 +36,7 @@
           <div id="result">
           </div>
           <div class="alert alert-danger" role="alert">
-            <strong>Oops! </strong>Please enter a number before hitting submit.
+            <strong>Oops! </strong>Please enter a valid number before hitting submit.
           </div>
         </div>
       </div>
