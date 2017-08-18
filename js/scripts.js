@@ -22,7 +22,7 @@ function inputConversion(numberInput) {
         numbers.push(i);
       }
     }
-    return numbers.join("    ");
+    return numbers.join(" ")
   }
 }
 
