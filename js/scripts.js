@@ -22,13 +22,13 @@ function inputConversion(number) {
 $(document).ready(function() {
   $("#number").submit(function(event) {
     event.preventDefault();
+     $(".alert").hide();
     var number = parseInt($("input#number-input").val());
     var numberOutput = inputConversion(number);
-    console.log(numberOutput);
-    // if (errorCheck === "error: no input or NaN") {
-    //   $(".alert").show();
-    // } else {
-    //   $("#result").text(inputConversion(number));
-    // }
+    if (errorCheck(number) === "error: no input or NaN") {
+      $(".alert").show();
+    } else {
+      $("#result").text(inputConversion(number));
+    }
   });
 });
